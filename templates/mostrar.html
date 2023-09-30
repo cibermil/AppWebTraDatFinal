@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Mostrar resultados</title>
-    </head>
-    <body>
-        <strong>Nombre: </strong>{{nombre}}
-        <br>
-        <strong>Edad: </strong>{{edad}}
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Búsqueda de Vehículos {% endblock %}</h1>
+    {% for dat in datos %}
+        <h2>{{ dat['modelo_vehiculo'] }}</h2>
+
+        <img src= {{ dat['imagen'] }} alt={{ dat['modelo_vehiculo'] }}>
+
+<h3><span class="badge bg-success">Ubicación:{{ dat['ubicacion'] }}</span></h3>
+              <h3><span class="badge rounded-pill bg-primary">Año fabricacion:{{ dat['año'] }} </span></h3>
+
+              <h3><span class="badge bg-success">Precio:{{ dat['precio'] }}</span></h3>
+
+              <h3><span class="badge bg-success">Recorrido:{{ dat['recorrido'] }}</span></h3>
+            <h3><span class="badge bg-success">Motor:{{ dat['motor'] }}</span></h3>
+<h3><span class="badge bg-success">Transmisión:{{ dat['transmision'] }}</span></h3>
+
+
+        <hr>
+    {% endfor %}
+{% endblock %}

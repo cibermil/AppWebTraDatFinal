@@ -2,7 +2,7 @@
 Aplicación Web de Tratamiento de datos Prueba Final, que consiste en consultar los datos almacenaddos mediante el módulo de extración de la web de wallapop, y posteriormente se crea una web utilizando la libreria Flask, para visualizar lo datos guardados.
 
 ## Creación de la conexión
-Con el módulo *
+Con el módulo *conexion_mongodb.py*, se crea la clase 
 Este es un ejemplo de texto que da entrada a una lista genérica de elementos:
 - Elemento 1
 - Elemento 2

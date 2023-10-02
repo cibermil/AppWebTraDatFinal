@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<style>
+
+.centrado {
+  text-align: center;
+}
+
+</style>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +16,29 @@
         <title>Búsqueda de vehículos</title>
     </head>
     <body>
-        <form method="POST" action="{{url_for('procesar')}}">
+        <h1 class="centrado">TRABAJO FINAL MÓDULO TRATAMIENTO DE DATOS - MAESTRIA CIBER SEGURIDAD<h1>
+        <h2 class="centrado">FORMULARIO DE BÚSQUEDA<h2>
 
-            <input name="desvehiculo" required type="text" placeholder="Descripción vehículo">
+            <div class="container">
+  <div class="card">
+    <div class="card-header bg-info text-center">
+      <h5 style="color:white">Ingrese datos a buscar</h5>
+    </div>
+    <div class="card-body  border border-info">
+      <form method="POST" action="{{url_for('procesar')}}" class="text-center">
+        <div class="form-group row justify-content-center">
+        </div>
+        <div>
+            Descripción Vehículo<br> <input class="form-control" name="desvehiculo" required type="text" placeholder="Descripción vehículo" class="btn btn-outline-info btn-rounded btn-block waves-effect z-depth-0">
             <br><br>
-            <input name="anio" required type="number" placeholder="Año Fabricación mayor a">
+           Año Fabricación <br><input class="form-control" name="anio" required type="number" placeholder="Año Fabricación mayor a" class="btn btn-outline-info btn-rounded btn-block waves-effect z-depth-0">
             <br><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </body>
+             <input type="submit" value="Consultar" class="btn btn-outline-info btn-rounded btn-block waves-effect z-depth-0" />
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
 </html>

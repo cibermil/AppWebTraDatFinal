@@ -11,7 +11,7 @@ def inicio():
 def procesar():
     desvehiculofun = request.form.get("desvehiculo")
     aniofun = request.form.get("anio")
-    #request.values.get["desvehiculo"]
+
 
     encontrado=BuscarDatos(desvehiculo=desvehiculofun,anio=aniofun,verbose=True)
 
